@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/installation-surrender">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Surrender your emission Allowances
+      </h1>
+      <form class="form" action="/confirm-surrender-amount" method="post">
+
+      <p class="govuk-body-l">You need to surrender <strong>2,480</strong> allowance to cover your greenhouse gas emissions in 2018. Your allowances need to be surrendered by 30 April 2019. If you don't have enough allowance you may need to purchase additional allowance from other operators.</p>
+
+      {% from "table/macro.njk" import govukTable %}
+
+  {{ govukTable({
+    firstCellIsHeader: true,
+    rows: [
+      [
+        {
+          text: "Allowance balance"
+        },
+        {
+          text: "2,500"
+        }
+      ],
+      [
+        {
+          text: "Verified emissions outcome"
+        },
+        {
+          text: "2,480"
+        }
+      ],
+      [
+        {
+
+          text: "Amount of allowance to surrender"
+        },
+        {
+          text: "2,480"
+        }
+      ],
+      [
+        {
+          text: "Allowances after surrender"
+        },
+        {
+          text: "20"
+        }
+      ]
+    ]
+  }) }}
+
+    <button class="govuk-button">Continue</button>
+
+  </form>
+
+    </div>
+  </div>
+
+{% endblock %}
