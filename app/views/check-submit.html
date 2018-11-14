@@ -14,7 +14,7 @@
 
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-xl">{{ data['which-installation']}}</span>
-        Check your answers before submitting your emissions data
+        Check your answers before submitting your emissions
       </h1>
 
       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
@@ -72,7 +72,6 @@
             {% if data["verifier-radio"] == "Lucidion" %}
               {{ data["verifier-radio"] }}
             {% else %}
-            {{ data["verifier-radio"] }}
               {{ data["verifier-select"] }}
             {% endif %}
           </dd>
