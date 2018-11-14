@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
+  Is Lucidion your verifier?
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,12 +13,44 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Confirm your verifier
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">{{ data['whichinstallation-submit']}}</span>
+        Is Lucidion your verifier?
       </h1>
 
       <form class="form" action="/check-submit" method="post">
 
         <p>A verifier will need to review your emissions before you can surrender allowance. This needs to be the same verifier as the one who verfied your emissions report.</p>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="verifier-radio" type="radio" value="Lucidion" data-aria-controls="conditional-how-contacted-conditional-1" {{ checked ('verifier-radio', 'Lucidion')}}>
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                  Yes, Lucidion is my verifier
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="verifier-radio" type="radio" value="Other" data-aria-controls="conditional-how-contacted-conditional-2"  {{ checked ('verifier-radio', 'Other')}}>
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                  No, I want to choose another verifier
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+                <div class="govuk-form-group">
+                  <select class="govuk-select" id="verifier-select" name="verifier-select">
+                      <option value="published">Recently published</option>
+                      <option value="updated" selected>Recently updated</option>
+                      <option value="views">Most views</option>
+                      <option value="comments">Most comments</option>
+                    </select>
+                </div>
+
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
         <button class="govuk-button">Continue</button>
 
