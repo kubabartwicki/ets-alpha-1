@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<form class="form" action="/surrender-amount" method="post">
+<form class="form" action="/verifier-submit" method="post">
 
 <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -28,15 +28,17 @@
     <label class="govuk-label" for="emission-2">
       PFC
     </label>
-    <input class="govuk-input govuk-input--width-10" id="emission2" name="emission-2" type="text">
+    <input class="govuk-input govuk-input--width-10" id="emission-2" name="emission-2" type="text">
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="emission-3">
       N2O
     </label>
-    <input class="govuk-input govuk-input--width-10" id="emission3" name="emission-3" type="text">
+    <input class="govuk-input govuk-input--width-10" id="emission-3" name="emission-3" type="text">
   </div>
+
+  <button class="govuk-button">Continue</button>
 
 </form>
 
