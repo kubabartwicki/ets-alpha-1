@@ -4,6 +4,11 @@
   Enter your emissions
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/installation-submit">Back</a>
+{% endblock %}
+
+
 {% block content %}
 
 <form class="form" action="/verifier-submit" method="post">
@@ -20,7 +25,7 @@
       CO2
       <span class="govuk-visually-hidden">line 1 of 2</span>
     </label>
-    <input class="govuk-input govuk-input--width-10" id="emission-1" name="emission1" type="text">
+    <input class="govuk-input govuk-input--width-10" id="emission-1" name="emission" type="text">
   </div>
 
 
@@ -28,14 +33,14 @@
     <label class="govuk-label" for="emission-2">
       PFC
     </label>
-    <input class="govuk-input govuk-input--width-10" id="emission-2" name="emission-2" type="text">
+    <input class="govuk-input govuk-input--width-10" id="emission-2" name="emission" type="text">
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="emission-3">
       N2O
     </label>
-    <input class="govuk-input govuk-input--width-10" id="emission-3" name="emission-3" type="text">
+    <input class="govuk-input govuk-input--width-10" id="emission-3" name="emission" type="text">
   </div>
 
   <button class="govuk-button">Continue</button>
