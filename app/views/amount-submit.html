@@ -11,13 +11,21 @@
 
 {% block content %}
 
-<form class="form" action="/verifier-submit" method="post">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Enter your emissions
+    </h1>
 
 <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Enter your emissions
-    </h1>
+
+
+<form class="form" action="/verifier-submit" method="post">
+
+      <p class="govuk-body">Your emissions data must match the same numbers that was verified in your Annual Emissions Report(AER). </p>
+
   </legend>
 
   <div class="govuk-form-group">
@@ -45,8 +53,12 @@
 
   <button class="govuk-button">Continue</button>
 
+
 </form>
 
 </fieldset>
+
+  </div>
+</div>
 
 {% endblock %}
