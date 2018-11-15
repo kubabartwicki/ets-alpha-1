@@ -13,13 +13,13 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">{{ data['which-installation']}}</span>
-        Check your answers before submitting your 2018 emissions
+        Check your answers before submitting your emissions data
       </h1>
 
-      <p class="govuk-body-l" style="margin-bottom:50px">
-        The emissions you submit will need to be verified by the verifier you selected.
-      </p>
+      <!-- only add a heading for a list if there is more than one list -->
+      <h2 class="govuk-heading-m">
+        Emissions data
+      </h2>
 
       <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
       <!--   * `app-check-your-answers--short` for short questions -->
@@ -34,7 +34,7 @@
              {{ data['emission-1']}}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="amount-submit">
+            <a href="#">
               Change<span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
@@ -45,10 +45,10 @@
             N2O
           </dt>
           <dd class="app-check-your-answers__answer">
-            {{ data['emission-2']}}
+
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="amount-submit">
+            <a href="#">
               Change<span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
@@ -59,10 +59,10 @@
             PFCs
           </dt>
           <dd class="app-check-your-answers__answer">
-            {{ data['emission-3']}}
+            {{ data['amount-submit']}}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="amount-submit">
+            <a href="#">
               Change<span class="govuk-visually-hidden"> home address</span>
             </a>
           </dd>
@@ -73,23 +73,24 @@
             Verifier
           </dt>
           <dd class="app-check-your-answers__answer">
-            {% if data["verifier-radio"] == "Lucidion" %}
-              {{ data["verifier-radio"] }}
-            {% else %}
-              {{ data["verifier-select"] }}
-            {% endif %}
+            {{ data['verifier-submit']}}
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="verifier-submit">
+            <a href="#">
               Change<span class="govuk-visually-hidden"> contact details</span>
             </a>
           </dd>
         </div>
       </dl>
 
+      <h2 class="govuk-heading-m">Now submit your emission data</h2>
+
+      <p>
+        Your submitted data will need to be verified by the Verifier you have selected.
+      </p>
 
       <a class="govuk-button" href="/confirmation-submit" role="button">
-        Submit emissions
+        Submit Emissions
       </a>
 
     </div>

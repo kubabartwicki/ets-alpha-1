@@ -25,13 +25,13 @@
 
 <form class="form" action="/verifier-submit" method="post">
 
-      <p class="govuk-body">Your emissions data must match the same numbers that was verified in your Annual Emissions Report(AER). </p>
+      <p class="govuk-body">Your emissions data must match the same numbers that was verified in your Annual Emissions Report (AER). </p>
 
   </legend>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="emission-1">
-      CO2
+      Carbon dixoide (C02)
       <span class="govuk-visually-hidden">line 1 of 2</span>
     </label>
     <input class="govuk-input govuk-input--width-10" id="emission-1" name="emission-1" type="text" value="{{ data['emission-1'] }}">
@@ -40,14 +40,14 @@
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="emission-2">
-      PFC
+      Perfluorinated Chemicals (PFCs)
     </label>
     <input class="govuk-input govuk-input--width-10" id="emission-2" name="emission-2" type="text" value="{{ data['emission-2'] }}">
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="emission-3">
-      N2O
+      Nitrous oxide (N20)
     </label>
     <input class="govuk-input govuk-input--width-10" id="emission-3" name="emission-3" type="text" value="{{ data['emission-3'] }}">
   </div>
