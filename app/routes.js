@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 router.get('/*-submit', function(req, res, next){
-  res.locals['serviceName'] = 'Submit emissions data (ETS)'
+  res.locals['serviceName'] = 'Submit emissions data for ETS'
   next()
 })
 
