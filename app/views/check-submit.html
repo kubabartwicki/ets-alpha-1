@@ -73,7 +73,11 @@
             Verifier
           </dt>
           <dd class="app-check-your-answers__answer">
-            {{ data['verifier-radio']}}
+            {% if data['verifier-radio'] == 'Other' %}
+              {{ data['verifier-select'] }}
+            {% else %}
+              {{ data['verifier-radio'] }}
+            {% endif %}
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="verifier-submit">
